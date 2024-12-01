@@ -32,7 +32,7 @@
 >
 	<div class="flex flex-1 items-center truncate">
 		{#if confirmDelete}
-			<span class="mr-1 font-semibold"> Delete </span>
+			<span class="mr-1 font-semibold"> 削除 </span>
 		{/if}
 		{#if conv.avatarHash}
 			<img
@@ -55,7 +55,7 @@
 		<button
 			type="button"
 			class="flex h-5 w-5 items-center justify-center rounded md:hidden md:group-hover:flex"
-			title="Confirm delete action"
+			title="削除アクションの確認"
 			on:click|preventDefault={() => {
 				confirmDelete = false;
 				dispatch("deleteConversation", conv.id);
@@ -66,7 +66,7 @@
 		<button
 			type="button"
 			class="flex h-5 w-5 items-center justify-center rounded md:hidden md:group-hover:flex"
-			title="Cancel delete action"
+			title="削除アクションのキャンセル"
 			on:click|preventDefault={() => (confirmDelete = false)}
 		>
 			<CarbonClose class="text-xs text-gray-400 hover:text-gray-500 dark:hover:text-gray-300" />
@@ -75,9 +75,9 @@
 		<button
 			type="button"
 			class="flex h-5 w-5 items-center justify-center rounded md:hidden md:group-hover:flex"
-			title="Đặt chủ đề cuộc trò chuyện"
+			title="会話のテーマを設定する"
 			on:click|preventDefault={() => {
-				const newTitle = prompt("Thay đổi chủ đề cuộc trò chuyện này:", conv.title);
+				const newTitle = prompt("この会話のテーマを変更する：", conv.title);
 				if (!newTitle) return;
 				dispatch("editConversationTitle", { id: conv.id, title: newTitle });
 			}}
@@ -88,7 +88,7 @@
 		<button
 			type="button"
 			class="flex h-5 w-5 items-center justify-center rounded md:hidden md:group-hover:flex"
-			title="Xóa cuộc trò chuyện"
+			title="会話を削除する"
 			on:click|preventDefault={(event) => {
 				if (event.shiftKey) {
 					dispatch("deleteConversation", conv.id);

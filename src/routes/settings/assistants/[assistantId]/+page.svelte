@@ -49,7 +49,7 @@
 					{assistant?.name}
 				</h1>
 				<span class="rounded-full border px-2 py-0.5 text-sm leading-none text-gray-500"
-					>public</span
+					>公開</span
 				>
 			</div>
 
@@ -60,11 +60,12 @@
 			{/if}
 
 			<p class="text-sm text-gray-500">
-				Model: <span class="font-semibold"> {assistant?.modelId} </span>
-				<span class="text-gray-300">•</span> Created by
+				モデル: <span class="font-semibold"> {assistant?.modelId} </span>
+				<span class="text-gray-300">•</span>
 				<a class="underline" href="{base}/assistants?user={assistant?.createdByName}">
 					{assistant?.createdByName}
 				</a>
+				作成
 			</p>
 			<div
 				class="flex items-center gap-4 whitespace-nowrap text-sm text-gray-500 hover:*:text-gray-800"
@@ -83,33 +84,33 @@
 				</button>
 				{#if assistant?.createdByMe}
 					<a href="{base}/settings/assistants/{assistant?._id}/edit" class="underline"
-						><CarbonPen class="mr-1.5 inline text-xs" />Edit
+						><CarbonPen class="mr-1.5 inline text-xs" />編集
 					</a>
 					<form method="POST" action="?/delete" use:enhance>
 						<button type="submit" class="flex items-center underline">
-							<CarbonTrash class="mr-1.5 inline text-xs" />Delete</button
+							<CarbonTrash class="mr-1.5 inline text-xs" />削除</button
 						>
 					</form>
 				{:else}
 					<form method="POST" action="?/unsubscribe" use:enhance>
 						<button type="submit" class="underline">
-							<CarbonTrash class="mr-1.5 inline text-xs" />Remove</button
+							<CarbonTrash class="mr-1.5 inline text-xs" />取り除く</button
 						>
 					</form>
 					<form method="POST" action="?/edit" use:enhance class="hidden">
 						<button type="submit" class="underline">
-							<CarbonCopy class="mr-1.5 inline text-xs" />Duplicate</button
+							<CarbonCopy class="mr-1.5 inline text-xs" />重複</button
 						>
 					</form>
 					{#if !assistant?.reported}
 						<form method="POST" action="?/report" use:enhance>
 							<button type="submit" class="underline">
-								<CarbonFlag class="mr-1.5 inline text-xs" />Report</button
+								<CarbonFlag class="mr-1.5 inline text-xs" />報告する</button
 							>
 						</form>
 					{:else}
 						<button type="button" disabled class="text-gray-700">
-							<CarbonFlag class="mr-1.5 inline text-xs" />Reported</button
+							<CarbonFlag class="mr-1.5 inline text-xs" />報告済み</button
 						>
 					{/if}
 				{/if}

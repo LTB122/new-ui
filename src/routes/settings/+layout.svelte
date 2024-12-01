@@ -45,7 +45,7 @@
 		class="xl: z-10 grid h-[95dvh] w-[90dvw] grid-cols-1 content-start gap-x-8 overflow-hidden rounded-2xl bg-white p-4 shadow-2xl outline-none sm:h-[80dvh] md:grid-cols-3 md:grid-rows-[auto,1fr] md:p-8 xl:w-[1200px] 2xl:h-[70dvh]"
 	>
 		<div class="col-span-1 mb-4 flex items-center justify-between md:col-span-3">
-			<h2 class="text-xl font-bold">Cài đặt</h2>
+			<h2 class="text-xl font-bold">設定</h2>
 			<button
 				class="btn rounded-lg"
 				on:click={() => {
@@ -71,7 +71,7 @@
 						<div
 							class="ml-auto rounded-lg bg-black px-2 py-1.5 text-xs font-semibold leading-none text-white"
 						>
-							Đang sử dụng
+						使用中
 						</div>
 					{/if}
 				</a>
@@ -79,7 +79,7 @@
 			<!-- if its huggingchat, the number of assistants owned by the user must be non-zero to show the UI -->
 			{#if data.enableAssistants}
 				<h3 bind:this={assistantsSection} class="pb-3 pl-3 pt-5 text-[.8rem] text-gray-800 sm:pl-1">
-					Assistants
+					アシスタント
 				</h3>
 				{#if !data.loginEnabled || (data.loginEnabled && !!data.user)}
 					<a
@@ -88,7 +88,7 @@
 					{$page.url.pathname === `${base}/settings/assistants/new` ? '!bg-gray-100 !text-gray-800' : ''}"
 					>
 						<CarbonAdd />
-						<div class="truncate">Create new assistant</div>
+						<div class="truncate">新しいアシスタントを作成</div>
 					</a>
 				{/if}
 				{#each data.assistants as assistant}
@@ -115,7 +115,7 @@
 							<div
 								class="ml-auto rounded-lg bg-black px-2 py-1.5 text-xs font-semibold leading-none text-white"
 							>
-								Active
+							アクティブ
 							</div>
 						{/if}
 					</a>
@@ -124,7 +124,7 @@
 					href="{base}/assistants"
 					class="group flex h-10 flex-none items-center gap-2 pl-3 pr-2 text-sm text-gray-500 hover:bg-gray-100 md:rounded-xl"
 					><CarbonArrowUpRight class="mr-1.5 shrink-0 text-xs " />
-					<div class="truncate">Browse Assistants</div>
+					<div class="truncate">アシスタントを閲覧</div>
 				</a>
 			{/if}
 
@@ -134,7 +134,7 @@
 				{$page.url.pathname === `${base}/settings` ? '!bg-gray-100 !text-gray-800' : ''}"
 			>
 				<UserIcon class="text-sm" />
-				Cài đặt hệ thống
+				システム設定
 			</a>
 		</div>
 		<div class="col-span-1 overflow-y-auto px-4 max-md:-mx-4 max-md:pt-6 md:col-span-2">
@@ -146,7 +146,7 @@
 				class="absolute bottom-4 right-4 m-2 flex items-center gap-1.5 rounded-full border border-gray-300 bg-gray-200 px-3 py-1 text-black"
 			>
 				<CarbonCheckmark class="text-green-500" />
-				Đã lưu
+				保存しました
 			</div>
 		{/if}
 	</dialog>

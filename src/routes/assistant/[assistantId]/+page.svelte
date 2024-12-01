@@ -71,12 +71,12 @@
 		{/if}
 		{#if data.assistant.createdByName}
 			<p class="mt-2 text-sm text-gray-500">
-				Created by <a
+				<a
 					class="hover:underline"
 					href="{base}/assistants?user={data.assistant.createdByName}"
 				>
 					{data.assistant.createdByName}
-				</a>
+				</a> 作成
 			</p>
 		{/if}
 		<button
@@ -85,7 +85,7 @@
 				goto(previousPage);
 			}}
 		>
-			Cancel
+		キャンセル
 		</button>
 		<form
 			method="POST"
@@ -107,7 +107,7 @@
 				type="submit"
 				class=" w-full rounded-full bg-black px-4 py-3 font-semibold text-white"
 			>
-				Start chatting
+			チャットを開始
 			</button>
 		</form>
 	</dialog>

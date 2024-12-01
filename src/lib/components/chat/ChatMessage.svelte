@@ -182,7 +182,7 @@
 			<!-- Web Search sources -->
 			{#if webSearchSources?.length}
 				<div class="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-sm">
-					<div class="text-gray-400">Sources:</div>
+					<div class="text-gray-400">出典：</div>
 					{#each webSearchSources as { link, title, hostname }}
 						<a
 							class="flex items-center gap-2 whitespace-nowrap rounded-lg border bg-white px-2 py-1.5 leading-none hover:border-gray-300 dark:border-gray-800 dark:bg-gray-900 dark:hover:border-gray-700"
@@ -287,7 +287,7 @@
 					{#if !readOnly}
 						<button
 							class="cursor-pointer rounded-lg border border-gray-100 p-1 text-xs text-gray-400 group-hover:block hover:text-gray-500 md:hidden lg:-right-2 dark:border-gray-800 dark:text-gray-400 dark:hover:text-gray-300"
-							title="Thử lại"
+							title="再試行"
 							type="button"
 							on:click={() => dispatch("retry", { content: message.content, id: message.id })}
 						>

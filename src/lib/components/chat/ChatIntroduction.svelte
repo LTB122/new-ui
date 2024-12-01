@@ -43,7 +43,7 @@
 			</div>
 			<p class="flex items-center whitespace-nowrap text-sm text-gray-600 dark:text-gray-400">
 				<span>
-					Được phát triển bởi nhóm nghiên cứu URA
+					URA研究チーム開発
 					<a href="https://www.ura.hcmut.edu.vn/" target="_blank" rel="noopener noreferrer">
 						<img
 							class="ml-1 inline-block aspect-square size-5 rounded border dark:border-gray-700"
@@ -68,7 +68,7 @@
 		<div class="overflow-hidden rounded-xl border dark:border-gray-800">
 			<div class="flex p-3">
 				<div>
-					<div class="text-sm text-gray-600 dark:text-gray-400">Mô hình hiện tại</div>
+					<div class="text-sm text-gray-600 dark:text-gray-400">現在のモデル</div>
 					<div class="flex items-center gap-1.5 font-semibold max-sm:text-smd">
 						<a href="https://www.ura.hcmut.edu.vn/" target="_blank" rel="noopener noreferrer">
 							<img
@@ -91,7 +91,7 @@
 	</div>
 	{#if currentModelMetadata.promptExamples}
 		<div class="lg:col-span-3 lg:mt-6">
-			<p class="mb-3 text-gray-600 dark:text-gray-300">Các ví dụ</p>
+			<p class="mb-3 text-gray-600 dark:text-gray-300">例</p>
 			<div class="grid gap-3 lg:grid-cols-3 lg:gap-5">
 				{#each currentModelMetadata.promptExamples as example}
 					<button

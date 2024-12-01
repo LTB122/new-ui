@@ -49,7 +49,7 @@
 				class="flex items-center truncate underline underline-offset-2"
 			>
 				<CarbonArrowUpRight class="mr-1.5 shrink-0 text-xs " />
-				Xem mô hình gốc tại đây
+				オリジナルモデルはこちらで確認できます。
 			</a>
 		{/if}
 
@@ -61,7 +61,7 @@
 				class="flex items-center truncate underline underline-offset-2"
 			>
 				<CarbonArrowUpRight class="mr-1.5 shrink-0 text-xs " />
-				Dataset page
+				データセットページ
 			</a>
 		{/if}
 
@@ -73,7 +73,7 @@
 				rel="noreferrer"
 			>
 				<CarbonArrowUpRight class="mr-1.5 shrink-0 text-xs " />
-				Web Khoa CSE
+				CSE学科のウェブサイト
 			</a>
 		{/if}
 		<CopyToClipBoardBtn
@@ -81,7 +81,7 @@
 			classNames="!border-none !shadow-none !py-0 !px-1 !rounded-md"
 		>
 			<div class="flex items-center gap-1.5 hover:underline">
-				<CarbonLink />Sao chép đường dẫn trực tiếp đến Chatbot
+				<CarbonLink />チャットボットへの直接リンクをコピーする
 			</div>
 		</CopyToClipBoardBtn>
 	</div>
@@ -96,19 +96,19 @@
 			$settings.activeModel = $page.params.model;
 		}}
 	>
-		{isActive ? "Mô hình đang được kích hoạt" : "Kích hoạt"}
+		{isActive ? "モデルが有効化されている" : "有効化する"}
 	</button>
 
 	<div class="flex w-full flex-col gap-2">
 		<div class="flex w-full flex-row content-between">
-			<h3 class="mb-1.5 text-lg font-semibold text-gray-800">Hướng dẫn hệ thống</h3>
+			<h3 class="mb-1.5 text-lg font-semibold text-gray-800">システムガイド</h3>
 			{#if hasCustomPreprompt}
 				<button
 					class="ml-auto underline decoration-gray-300 hover:decoration-gray-700"
 					on:click|stopPropagation={() =>
 						($settings.customPrompts[$page.params.model] = model.preprompt)}
 				>
-					Đặt lại
+				リセット
 				</button>
 			{/if}
 		</div>

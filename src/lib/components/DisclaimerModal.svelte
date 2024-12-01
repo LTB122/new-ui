@@ -48,9 +48,9 @@
 					}}
 				>
 					{#if $page.data.loginEnabled}
-						Đăng nhập
+					ログイン
 					{:else}
-						Bắt đầu ngay
+					今すぐ始める
 					{/if}
 				</button>
 			{/if}
@@ -60,10 +60,10 @@
 						type="submit"
 						class="flex w-full items-center justify-center whitespace-nowrap rounded-full border-2 border-black bg-black px-5 py-2 text-lg font-semibold text-gray-100 transition-colors hover:bg-gray-900"
 					>
-						Sign in
-						{#if PUBLIC_APP_NAME === "HuggingChat"}
-							with <LogoHuggingFaceBorderless classNames="text-xl mr-1 ml-1.5 flex-none" /> Hugging Face
-						{/if}
+					{#if PUBLIC_APP_NAME === "HuggingChat"}
+					<LogoHuggingFaceBorderless classNames="text-xl mr-1 ml-1.5 flex-none" /> Hugging Faceで
+					{/if}
+					サインイン
 					</button>
 				</form>
 			{/if}

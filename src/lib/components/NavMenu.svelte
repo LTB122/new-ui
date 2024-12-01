@@ -36,10 +36,10 @@
 	};
 
 	const titles: { [key: string]: string } = {
-		today: "Hôm nay",
-		week: "Tuần này",
-		month: "Tháng này",
-		older: "Cũ hơn",
+		today: "今日",
+		week: "今週",
+		month: "今月",
+		older: "もっと古い",
 	} as const;
 </script>
 
@@ -53,7 +53,7 @@
 		on:click={handleNewChatClick}
 		class="flex rounded-lg border bg-white px-2 py-0.5 text-center shadow-sm hover:shadow-none dark:border-gray-600 dark:bg-gray-700"
 	>
-	Cuộc trò chuyện mới
+	新しい会話
 	</a>
 </div>
 <div
@@ -87,7 +87,7 @@
 				type="submit"
 				class="ml-auto h-6 flex-none items-center gap-1.5 rounded-md border bg-white px-2 text-gray-700 shadow-sm group-hover:flex hover:shadow-none md:hidden dark:border-gray-600 dark:bg-gray-600 dark:text-gray-400 dark:hover:text-gray-300"
 			>
-				Sign Out
+			サインアウト
 			</button>
 		</form>
 	{/if}
@@ -97,7 +97,7 @@
 				type="submit"
 				class="flex h-9 w-full flex-none items-center gap-1.5 rounded-lg pl-2.5 pr-2 text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700"
 			>
-				Login
+			ログイン
 			</button>
 		</form>
 	{/if}
@@ -106,17 +106,17 @@
 		type="button"
 		class="flex h-9 flex-none items-center gap-1.5 rounded-lg pl-2.5 pr-2 text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700"
 	>
-		Giao diện
+	インターフェース
 	</button>
 	{#if $page.data.enableAssistants}
 		<a
 			href="{base}/assistants"
 			class="flex h-9 flex-none items-center gap-1.5 rounded-lg pl-2.5 pr-2 text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700"
 		>
-			Assistants
+		アシスタント
 			<span
 				class="ml-auto rounded-full border border-gray-300 px-2 py-0.5 text-xs text-gray-500 dark:border-gray-500 dark:text-gray-400"
-				>New</span
+				>最新</span
 			>
 		</a>
 	{/if}
@@ -125,14 +125,14 @@
 		href="{base}/settings"
 		class="flex h-9 flex-none items-center gap-1.5 rounded-lg pl-2.5 pr-2 text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700"
 	>
-		Cài đặt
+	設定
 	</a>
 	{#if PUBLIC_APP_NAME === "HuggingChat"}
 		<a
 			href="{base}/privacy"
 			class="flex h-9 flex-none items-center gap-1.5 rounded-lg pl-2.5 pr-2 text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700"
 		>
-			About & Privacy
+		概要 & プライバシー
 		</a>
 	{/if}
 </div>

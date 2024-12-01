@@ -110,15 +110,15 @@
 	}}
 >
 	{#if assistant}
-		<h2 class="text-xl font-semibold">Edit assistant ({assistant?.name ?? ""})</h2>
+		<h2 class="text-xl font-semibold">アシスタント({assistant?.name ?? ""})を編集する</h2>
 		<p class="mb-6 text-sm text-gray-500">
-			Modifying an existing assistant will propagate those changes to all users.
+			既存のアシスタントを変更すると、その変更はすべてのユーザーに反映されます。
 		</p>
 	{:else}
-		<h2 class="text-xl font-semibold">Create new assistant</h2>
+		<h2 class="text-xl font-semibold">新しいアシスタントを作成する</h2>
 		<p class="mb-6 text-sm text-gray-500">
-			Create and share your own AI Assistant. All assistants are <span
-				class="rounded-full border px-2 py-0.5 leading-none">public</span
+			自分だけのAIアシスタントを作成して共有しましょう。すべてのアシスタントは<span
+				class="rounded-full border px-2 py-0.5 leading-none">公開されています。</span
 			>
 		</p>
 	{/if}
@@ -126,7 +126,7 @@
 	<div class="mx-1 grid flex-1 grid-cols-2 gap-4 max-sm:grid-cols-1">
 		<div class="flex flex-col gap-4">
 			<div>
-				<span class="mb-1 block pb-2 text-sm font-semibold">Avatar</span>
+				<span class="mb-1 block pb-2 text-sm font-semibold">アバター</span>
 				<input
 					type="file"
 					accept="image/*"
@@ -168,7 +168,7 @@
 							}}
 							class="mx-auto w-max text-center text-xs text-gray-600 hover:underline"
 						>
-							Delete
+						削除
 						</button>
 					</div>
 				{:else}
@@ -177,7 +177,7 @@
 							for="avatar"
 							class="btn flex h-8 rounded-lg border bg-white px-3 py-1 text-gray-500 shadow-sm transition-all hover:bg-gray-100"
 						>
-							<CarbonUpload class="mr-2 text-xs " /> Upload
+							<CarbonUpload class="mr-2 text-xs " /> アップロード
 						</label>
 					</div>
 				{/if}
@@ -185,7 +185,7 @@
 			</div>
 
 			<label>
-				<span class="mb-1 text-sm font-semibold">Name</span>
+				<span class="mb-1 text-sm font-semibold">名前</span>
 				<input
 					name="name"
 					class="w-full rounded-lg border-2 border-gray-200 bg-gray-100 p-2"
@@ -196,7 +196,7 @@
 			</label>
 
 			<label>
-				<span class="mb-1 text-sm font-semibold">Description</span>
+				<span class="mb-1 text-sm font-semibold">説明</span>
 				<textarea
 					name="description"
 					class="w-full rounded-lg border-2 border-gray-200 bg-gray-100 p-2"
@@ -207,7 +207,7 @@
 			</label>
 
 			<label>
-				<span class="mb-1 text-sm font-semibold">Model</span>
+				<span class="mb-1 text-sm font-semibold">モデル</span>
 				<select name="modelId" class="w-full rounded-lg border-2 border-gray-200 bg-gray-100 p-2">
 					{#each models.filter((model) => !model.unlisted) as model}
 						<option
@@ -222,7 +222,7 @@
 			</label>
 
 			<label>
-				<span class="mb-1 text-sm font-semibold">User start messages</span>
+				<span class="mb-1 text-sm font-semibold">ユーザー開始メッセージ</span>
 				<div class="flex flex-col gap-2 md:max-h-32">
 					<input
 						name="exampleInput1"
@@ -256,11 +256,11 @@
 		</div>
 
 		<label class="flex flex-col">
-			<span class="mb-1 text-sm font-semibold"> Instructions (system prompt) </span>
+			<span class="mb-1 text-sm font-semibold"> 指示（システムプロンプト）  </span>
 			<textarea
 				name="preprompt"
 				class="min-h-[8lh] flex-1 rounded-lg border-2 border-gray-200 bg-gray-100 p-2 text-sm"
-				placeholder="You'll act as..."
+				placeholder="あなたは...として行動します"
 				value={assistant?.preprompt ?? ""}
 			/>
 			<p class="text-xs text-red-500">{getError("preprompt", form)}</p>
@@ -270,7 +270,7 @@
 	<div class="mt-5 flex justify-end gap-2">
 		<a
 			href={assistant ? `${base}/settings/assistants/${assistant?._id}` : `${base}/settings`}
-			class="rounded-full bg-gray-200 px-8 py-2 font-semibold text-gray-600">Cancel</a
+			class="rounded-full bg-gray-200 px-8 py-2 font-semibold text-gray-600">キャンセル</a
 		>
 		<button
 			type="submit"
@@ -281,7 +281,7 @@
 			class:text-gray-600={loading}
 			class:text-white={!loading}
 		>
-			{assistant ? "Save" : "Create"}
+			{assistant ? "保存" : "作成"}
 			{#if loading}
 				<IconLoading classNames="ml-2 h-min" />
 			{/if}

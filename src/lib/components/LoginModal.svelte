@@ -23,8 +23,7 @@
 			{PUBLIC_APP_DESCRIPTION}
 		</p>
 		<p class="rounded-xl border bg-white/80 p-2 text-base text-gray-800">
-			You have reached the guest message limit, please Sign In with your Hugging Face account to
-			continue.
+			ゲストメッセージの制限に達しました。続けるにはHugging Faceアカウントでサインインしてください。
 		</p>
 
 		<form
@@ -38,10 +37,10 @@
 					type="submit"
 					class="flex w-full items-center justify-center whitespace-nowrap rounded-full bg-black px-5 py-2 text-center text-lg font-semibold text-gray-100 transition-colors hover:bg-gray-900"
 				>
-					Sign in
 					{#if PUBLIC_APP_NAME === "HuggingChat"}
-						with <LogoHuggingFaceBorderless classNames="text-xl mr-1 ml-1.5" /> Hugging Face
+						with <LogoHuggingFaceBorderless classNames="text-xl mr-1 ml-1.5" /> Hugging Faceで
 					{/if}
+					サインイン
 				</button>
 			{:else}
 				<button
@@ -54,7 +53,7 @@
 						$settings.ethicsModalAccepted = true;
 					}}
 				>
-					Start chatting
+				チャットを開始する
 				</button>
 			{/if}
 		</form>

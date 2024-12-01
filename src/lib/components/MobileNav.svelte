@@ -12,7 +12,7 @@
 	export let isOpen = false;
 	export let title: string | undefined;
 
-	$: title = title || "Cuộc trò chuyện mới";
+	$: title = title || "新しいチャット";
 
 	let closeEl: HTMLButtonElement;
 	let openEl: HTMLButtonElement;
@@ -37,7 +37,7 @@
 		type="button"
 		class="-ml-3 flex size-12 shrink-0 items-center justify-center text-lg"
 		on:click={() => dispatch("toggle", true)}
-		aria-label="Open menu"
+		aria-label="メニューを開く"
 		bind:this={openEl}><CarbonTextAlignJustify /></button
 	>
 	<span class="truncate px-4">{title}</span>
@@ -57,7 +57,7 @@
 			type="button"
 			class="-mr-3 ml-auto flex size-12 items-center justify-center text-lg"
 			on:click={() => dispatch("toggle", false)}
-			aria-label="Close menu"
+			aria-label="メニューを閉じる"
 			bind:this={closeEl}><CarbonClose /></button
 		>
 	</div>

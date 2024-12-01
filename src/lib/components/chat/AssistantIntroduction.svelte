@@ -36,7 +36,7 @@
 			{/if}
 
 			<div class="flex h-full flex-col gap-2 text-balance">
-				<p class="-mb-1">Assistant</p>
+				<p class="-mb-1">アシスタント</p>
 
 				<p class="text-xl font-bold sm:text-2xl">{assistant.name}</p>
 				<p class="line-clamp-6 text-sm text-gray-500 dark:text-gray-400">
@@ -45,12 +45,12 @@
 
 				{#if assistant.createdByName}
 					<p class="pt-2 text-sm text-gray-400 dark:text-gray-500">
-						Created by <a
+						<a
 							class="hover:underline"
 							href="{base}/assistants?user={assistant.createdByName}"
 						>
 							{assistant.createdByName}
-						</a>
+						</a>作成
 					</p>
 				{/if}
 			</div>
@@ -59,7 +59,7 @@
 			<a
 				href="{base}/settings/assistants/{assistant._id.toString()}"
 				class="flex items-center gap-1.5 rounded-full border bg-white py-1 pl-3 pr-2.5 text-xs text-gray-800 shadow-sm hover:shadow-inner md:text-sm dark:border-gray-700 dark:bg-gray-700 dark:text-gray-300/90 dark:hover:bg-gray-800"
-				><IconGear class="text-xxs" />Settings</a
+				><IconGear class="text-xxs" />設定</a
 			>
 		</div>
 	</div>

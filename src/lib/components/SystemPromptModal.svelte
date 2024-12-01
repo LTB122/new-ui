@@ -14,14 +14,14 @@
 	on:click={() => (isOpen = !isOpen)}
 	on:keydown={(e) => e.key === "Enter" && (isOpen = !isOpen)}
 >
-	<CarbonBlockchain class="text-xxs" /> Using Custom System Prompt
+	<CarbonBlockchain class="text-xxs" /> カスタムシステムプロンプトを使用する
 </button>
 
 {#if isOpen}
 	<Modal on:close={() => (isOpen = false)} width="w-full max-w-2xl">
 		<div class="flex w-full flex-col gap-5 p-6">
 			<div class="flex items-start justify-between text-xl font-semibold text-gray-800">
-				<h2>System Prompt</h2>
+				<h2>システムプロンプト</h2>
 				<button type="button" class="group" on:click={() => (isOpen = false)}>
 					<CarbonClose class="mt-auto text-gray-900 group-hover:text-gray-500" />
 				</button>

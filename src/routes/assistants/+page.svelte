@@ -34,7 +34,7 @@
 
 <svelte:head>
 	{#if isHuggingChat}
-		<title>HuggingChat - Assistants</title>
+		<title>ハギングチャット - アシスタント</title>
 		<meta property="og:title" content="HuggingChat - Assistants" />
 		<meta property="og:type" content="link" />
 		<meta
@@ -53,10 +53,10 @@
 <div class="scrollbar-custom mr-1 h-full overflow-y-auto py-12 md:py-24">
 	<div class="pt-42 mx-auto flex flex-col px-5 xl:w-[60rem] 2xl:w-[64rem]">
 		<div class="flex items-center">
-			<h1 class="text-2xl font-bold">Assistants</h1>
+			<h1 class="text-2xl font-bold">アシスタント</h1>
 			{#if isHuggingChat}
 				<div class="5 ml-1.5 rounded-lg text-xxs uppercase text-gray-500 dark:text-gray-500">
-					beta
+					ベータ
 				</div>
 				<a
 					href="https://huggingface.co/spaces/huggingchat/chat-ui/discussions/357"
@@ -67,14 +67,14 @@
 				</a>
 			{/if}
 		</div>
-		<h3 class="text-gray-500">Popular assistants made by the community</h3>
+		<h3 class="text-gray-500">コミュニティ作成の人気アシスタント</h3>
 		<div class="mt-6 flex justify-between gap-2 max-sm:flex-col sm:items-center">
 			<select
 				class="mt-1 h-[34px] rounded-lg border border-gray-300 bg-gray-50 px-2 text-sm text-gray-900 focus:border-blue-700 focus:ring-blue-700 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
 				bind:value={data.selectedModel}
 				on:change={onModelChange}
 			>
-				<option value="">All models</option>
+				<option value="">すべてのモデル</option>
 				{#each data.models.filter((model) => !model.unlisted) as model}
 					<option value={model.name}>{model.name}</option>
 				{/each}
@@ -84,7 +84,7 @@
 				href={`${base}/settings/assistants/new`}
 				class="flex items-center gap-1 whitespace-nowrap rounded-lg border bg-white py-1 pl-1.5 pr-2.5 shadow-sm hover:bg-gray-50 hover:shadow-none dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-700"
 			>
-				<CarbonAdd />Create New assistant
+				<CarbonAdd />新しいアシスタントを作成
 			</a>
 		</div>
 
@@ -93,7 +93,7 @@
 				<div
 					class="flex items-center gap-1.5 rounded-full border border-gray-300 bg-gray-50 px-3 py-1 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
 				>
-					{assistantsCreator}'s Assistants
+					{assistantsCreator}のアシスタント
 					<a
 						href={getHref($page.url, {
 							existingKeys: { behaviour: "delete", keys: ["user", "modelId", "p"] },
@@ -109,8 +109,8 @@
 						href="https://hf.co/{assistantsCreator}"
 						target="_blank"
 						class="ml-auto flex items-center text-xs text-gray-500 underline hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-300"
-						><CarbonArrowUpRight class="mr-1 flex-none text-[0.58rem]" target="_blank" />View {assistantsCreator}
-						on HF</a
+						><CarbonArrowUpRight class="mr-1 flex-none text-[0.58rem]" target="_blank" />HFで{assistantsCreator}を表示 
+						</a
 					>
 				{/if}
 			{:else}
@@ -123,7 +123,7 @@
 						: 'border-transparent text-gray-400 hover:text-gray-800 dark:hover:text-gray-300'}"
 				>
 					<CarbonEarthAmerica class="text-xs" />
-					Community
+					コミュニティ
 				</a>
 				{#if data.user?.username}
 					<a
@@ -178,17 +178,17 @@
 					</p>
 					{#if assistant.createdByName}
 						<p class="mt-auto pt-2 text-xs text-gray-400 dark:text-gray-500">
-							Created by <a
+							<a
 								class="hover:underline"
 								href="{base}/assistants?user={assistant.createdByName}"
 							>
 								{assistant.createdByName}
-							</a>
+							</a>作成
 						</p>
 					{/if}
 				</a>
 			{:else}
-				No assistants found
+			アシスタントが見つかりません
 			{/each}
 		</div>
 		<Pagination

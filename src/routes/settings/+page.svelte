@@ -22,7 +22,7 @@
 
 <div class="flex w-full flex-col gap-5">
 	<div class="flex items-start justify-between text-xl font-semibold text-gray-800">
-		<h2>Cài đặt hệ thống</h2>
+		<h2>システム設定</h2>
 	</div>
 
 	<div class="flex h-full flex-col gap-4 pt-4 max-sm:pt-0">
@@ -34,19 +34,19 @@
 					bind:checked={$settings.shareConversationsWithModelAuthors}
 				/>
 				<div class="inline cursor-pointer select-none items-center gap-2 pl-2">
-					Chia sẻ cuộc trò chuyện với các nhà phát triển Chatbot
+					チャットボットの開発者と会話を共有する
 				</div>
 			</label>
 
 			<p class="text-sm text-gray-500">
-				Chia sẻ dữ liệu của bạn giúp chúng tôi phát triển Chatbot tốt hơn nữa.
+				あなたのデータを共有することで、私たちがチャットボットをさらに改善する手助けになります。
 			</p>
 		{/if}
 		<!-- svelte-ignore a11y-label-has-associated-control -->
 		<label class="mt-6 flex items-center">
 			<Switch name="hideEmojiOnSidebar" bind:checked={$settings.hideEmojiOnSidebar} />
 			<div class="inline cursor-pointer select-none items-center gap-2 pl-2">
-				Ẩn biểu tượng cảm xúc trong các chủ đề cuộc trò chuyện
+				会話のトピックで絵文字を非表示にする
 			</div>
 		</label>
 
@@ -55,13 +55,13 @@
 				href="mailto:long.nguyencse2023@hcmut.edu.vn?subject=Phản hồi về ứng dụng HCMUT Chatbot"
 				class="flex items-center underline decoration-gray-300 underline-offset-2 hover:decoration-gray-700"
 			>
-				<CarbonArrowUpRight class="mr-1.5 shrink-0 text-sm" /> Gửi phản hồi đến nhà phát triển
+				<CarbonArrowUpRight class="mr-1.5 shrink-0 text-sm" /> 開発者にフィードバックを送る
 			</a>
 			<button
 				on:click|preventDefault={() => (isConfirmingDeletion = true)}
 				type="submit"
 				class="flex items-center underline decoration-gray-300 underline-offset-2 hover:decoration-gray-700"
-				><CarbonTrashCan class="mr-2 inline text-sm text-red-500" />Xóa tất cả các cuộc trò chuyện</button
+				><CarbonTrashCan class="mr-2 inline text-sm text-red-500" />すべての会話を削除する</button
 			>
 		</div>
 	</div>
@@ -77,7 +77,7 @@
 				class="flex w-full flex-col gap-5 p-6"
 			>
 				<div class="flex items-start justify-between text-xl font-semibold text-gray-800">
-					<h2>Bạn chắc chưa?</h2>
+					<h2>本当に削除してもいいですか？</h2>
 					<button
 						type="button"
 						class="group"
@@ -87,13 +87,13 @@
 					</button>
 				</div>
 				<p class="text-gray-800">
-					Hành động này sẽ xóa tất cả cuộc trò chuyện của bạn. Điều này không thể hoàn tác.
+					この操作により、あなたのすべての会話が削除されます。これは元に戻すことはできません。
 				</p>
 				<button
 					type="submit"
 					class="mt-2 rounded-full bg-red-700 px-5 py-2 text-lg font-semibold text-gray-100 ring-gray-400 ring-offset-1 transition-all focus-visible:outline-none focus-visible:ring hover:ring"
 				>
-					Xác nhận xóa
+				削除を確認する
 				</button>
 			</form>
 		</Modal>

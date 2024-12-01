@@ -88,7 +88,7 @@
 			class="mb-3 mt-1.5 text-sm text-gray-500 dark:text-gray-400"
 			class:opacity-0={file_error_message}
 		>
-			Drag and drop <span class="font-semibold">one image</span> here
+			ここに<span class="font-semibold">画像を1枚</span>ドラッグ＆ドロップしてください
 		</p>
 	</div>
 </div>

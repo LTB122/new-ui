@@ -20,7 +20,7 @@
 		rel="noreferrer"
 		class="flex items-center hover:underline"
 		><CarbonArrowUpRight class="mr-1.5 shrink-0 text-xs text-gray-400" />
-		Xem mô hình gốc tại đây
+		オリジナルモデルはこちらで確認できます。
 		<div class="max-sm:hidden"></div></a
 	>
 	{#if model.datasetName || model.datasetUrl}
@@ -30,7 +30,7 @@
 			rel="noreferrer"
 			class="flex items-center hover:underline"
 			><CarbonArrowUpRight class="mr-1.5 shrink-0 text-xs text-gray-400" />
-			Dataset
+			データセット
 			<div class="max-sm:hidden">&nbsp;page</div></a
 		>
 	{/if}
@@ -42,7 +42,7 @@
 			rel="noreferrer"
 		>
 			<CarbonEarth class="mr-1.5 shrink-0 text-xs text-gray-400" />
-			Web Khoa CSE
+			CSE学科のウェブサイト
 		</a>
 	{/if}
 </div>
